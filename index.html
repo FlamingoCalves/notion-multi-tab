@@ -11,7 +11,16 @@
                 "https://www.notion.so/1a7140ccb5028166b521da06cd31a82f?v=1ba140ccb50280dbbc62000cb9d0aa5f",
                 "https://www.notion.so/1a7140ccb50280f697d5c2325e982c93?v=1a7140ccb50281b09356000cc673198c"
             ];
-            urls.forEach(url => window.open(url, "_blank"));
+
+            // Open a new window with the first URL
+            let newWindow = window.open(urls[0], "NotionWindow");
+
+            // Open the rest of the URLs in the same new window
+            setTimeout(() => {
+                for (let i = 1; i < urls.length; i++) {
+                    newWindow.open(urls[i], "_blank");
+                }
+            }, 500); // Slight delay to ensure window is created first
         }
     </script>
 </head>
