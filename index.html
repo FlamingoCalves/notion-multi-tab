@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Notion Tabs</title>
+    <script>
+        function openTabs() {
+            const urls = [
+                "https://www.notion.so/Customer-Service-TEST-v1-1b8140ccb5028084bc91e2b35e9d5a03",
+                "https://www.notion.so/1a7140ccb5028166b521da06cd31a82f?v=1ba140ccb50280dbbc62000cb9d0aa5f",
+                "https://www.notion.so/1a7140ccb50280f697d5c2325e982c93?v=1a7140ccb50281b09356000cc673198c"
+            ];
+            urls.forEach(url => window.open(url, "_blank"));
+        }
+    </script>
+</head>
+<body onload="openTabs()">
+    <h1>Opening Notion Tabs...</h1>
+</body>
+</html>
