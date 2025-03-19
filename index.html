@@ -11,25 +11,11 @@
                 "https://www.notion.so/1a7140ccb5028166b521da06cd31a82f?v=1ba140ccb50280dbbc62000cb9d0aa5f",
                 "https://www.notion.so/1a7140ccb50280f697d5c2325e982c93?v=1a7140ccb50281b09356000cc673198c"
             ];
-
-            // Open a new window as a container
-            let newWindow = window.open("", "_blank", "noopener,noreferrer,width=1200,height=800");
-
-            // If the window was successfully created
-            if (newWindow) {
-                // Loop through all URLs and create a series of links
-                urls.forEach(url => {
-                    newWindow.location.href = url;
-                    newWindow = window.open(url, "_blank");
-                });
-            } else {
-                alert("Pop-ups are blocked! Please allow pop-ups for this to work.");
-            }
+            urls.forEach(url => window.open(url, "_blank"));
         }
     </script>
 </head>
-<body>
-    <h1>Click below to open all Notion pages</h1>
-    <button onclick="openTabs()">Open Notion Tabs</button>
+<body onload="openTabs()">
+    <h1>Opening Notion Tabs...</h1>
 </body>
 </html>
